@@ -1,11 +1,12 @@
 import 'package:chorehunter/data/database.dart';
 import 'package:chorehunter/util/dialog_box.dart';
 import 'package:chorehunter/util/todo_tile.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
 
   @override
   State<HomePage> createState() => _HomePageState();
@@ -71,12 +72,26 @@ class _HomePageState extends State<HomePage> {
     db.updateDataBase();
   }
 
+  // sign user out method
+  void signUserOut() {
+    FirebaseAuth.instance.signOut();
+  }
+
+// setting path to the current logged in user
+  final user = FirebaseAuth.instance.currentUser!;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.green[200],
+      backgroundColor: Colors.white,
       appBar: AppBar(
-        title: const Text('Chore Hunter'),
+        actions: [
+          IconButton(
+            onPressed: signUserOut,
+            icon: Icon(Icons.logout),
+          )
+        ],
+        title: Text('CHORE HUNTER'),
         elevation: 0,
       ),
       floatingActionButton: FloatingActionButton(

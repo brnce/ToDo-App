@@ -1,9 +1,15 @@
+import 'package:chorehunter/pages/auth_page.dart';
 import 'package:chorehunter/pages/login_page.dart';
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'pages/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() async {
+  // init firebase
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
+
   // init the hive
   await Hive.initFlutter();
 
@@ -20,8 +26,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginPage(),
-      theme: ThemeData(primarySwatch: Colors.green),
+      home: AuthPage(),
+      theme: ThemeData(primarySwatch: Colors.blueGrey),
     );
   }
 }

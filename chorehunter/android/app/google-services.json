@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "132878670152",
+    "project_id": "chore-hunter-9a6bd",
+    "storage_bucket": "chore-hunter-9a6bd.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:132878670152:android:21b4e45624e78b24867b7d",
+        "android_client_info": {
+          "package_name": "com.example.chorehunter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "132878670152-aqo67g4mlp7jrrk7lb8a5b30qascg5eb.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdTRqYEfqokSj4v6eHEiblfVVk38PB-uc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "132878670152-aqo67g4mlp7jrrk7lb8a5b30qascg5eb.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "132878670152-419alui2ph86hhtpa4fa85h8edlfb9oa.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.chorehunter"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
